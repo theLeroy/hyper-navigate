@@ -63,158 +63,32 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
-
-module.exports = require("prop-types");
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-module.exports = require("react");
-
-/***/ },
-/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony export (immutable) */ exports["reduceUI"] = reduceUI;
-/* harmony export (immutable) */ exports["mapHyperState"] = mapHyperState;
-/* harmony export (immutable) */ exports["decorateHyperLine"] = decorateHyperLine;
-/* harmony export (immutable) */ exports["decorateHyper"] = decorateHyper;
+/* harmony export (immutable) */ exports["watch"] = watch;
+// import React, { Component } from 'react'
+// import PropTypes from 'prop-types'
+console.log("ass");
 
-
-alert("ass");
-function reduceUI(state, { type, config }) {
-  switch (type) {
-    case 'CONFIG_LOAD':
-    case 'CONFIG_RELOAD':
-      {
-        return state.set('hyperline', config.hyperline);
-      }
-    default:
-      break;
-  }
-
-  return state;
+function watch() {
+    console.log("asdsda");
 }
 
-function mapHyperState({ ui: { colors, fontFamily, hyperline } }, map) {
-  alert("asdsda");
-
-  // let userPlugins = []
-  // if (hyperline !== undefined) {
-  //   if (hyperline.plugins !== undefined) {
-  //     userPlugins = hyperline.plugins
-  //   }
-  // }
-  //
-  // return Object.assign({}, map, {
-  //   colors: getColorList(colors),
-  //   fontFamily,
-  //   userPlugins
-  // })
-}
-
-function pluginsByName(plugins) {
-  alert("asdsda");
-
-  // const dict = {}
-  // plugins.forEach((plugin) => {
-  //   dict[plugin.displayName()] = plugin
-  // })
-  //
-  // return dict
-}
-
-function filterPluginsByConfig(plugins) {
-  alert("asdsda");
-
-  //   const config = window.config.getConfig().hyperline
-  //   if (!config) return plugins
-  //
-  //   const userPluginNames = config.plugins
-  //   if (!userPluginNames) {
-  //     return plugins
-  //   }
-  //
-  //   plugins = pluginsByName(plugins)
-  //   const filtered = []
-  //
-  //   userPluginNames.forEach((name) => {
-  //     if (plugins.hasOwnProperty(name)) {
-  //       filtered.push(plugins[name])
-  //     }
-  //   })
-  //
-  //   return filtered
-}
-
-function decorateHyperLine(HyperLine) {
-  alert("asdsda");
-
-  // return class extends Component {
-  //   static displayName() {
-  //     return 'HyperLine'
-  //   }
-  //
-  //   static propTypes() {
-  //     return {
-  //       plugins: PropTypes.array.isRequired
-  //     }
-  //   }
-  //
-  //   static get defaultProps() {
-  //     return {
-  //       plugins: []
-  //     }
-  //   }
-  //
-  //   render() {
-  //     const plugins = [...this.props.plugins, ...hyperlinePlugins]
-  //
-  //     return <HyperLine {...this.props} plugins={filterPluginsByConfig(plugins)} />
-  //   }
-  // }
-}
-
-function decorateHyper(Hyper) {
-  alert("asdsda");
-  // return class extends Component {
-  //   static displayName() {
-  //     return 'Hyper'
-  //   }
-  //
-  //   static propTypes() {
-  //     return {
-  //       colors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  //       fontFamily: PropTypes.string,
-  //       customChildren: PropTypes.element.isRequired
-  //     }
-  //   }
-  //
-  //   render() {
-  //     const customChildren = (
-  //       <div>
-  //         {this.props.customChildren}
-  //         <HyperLine style={{ fontFamily: this.props.fontFamily }} />
-  //       </div>
-  //     )
-  //
-  //     return <Hyper {...this.props} customChildren={customChildren} />
-  //   }
-  // }
-}
+exports.onWindow = function (window) {
+    setTimeout(() => {
+        window.sessions.forEach(session => {
+            session.write('ping www.google.ch');
+            session.write('\x0a');
+        });
+    }, 25);
+};
 
 /***/ }
 /******/ ])));
