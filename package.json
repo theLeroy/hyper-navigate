@@ -29,7 +29,7 @@
     "public-ip": "^2.0.1",
     "spotify-node-applescript": "^1.1.0",
     "styled-jsx": "2.2.6",
-    "systeminformation": "^3.4.1"
+    "systeminformation": "^5.6.4"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
